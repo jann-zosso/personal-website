@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jann Zosso - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="nav-link-group">
+          <a href="index.html" class="active">Home</a>
+          <a href="physics.html">Physics</a>
+          <a href="cv.html">CV</a>
+          <a href="media.html">Media & More</a>
+        </div>
+        <button
+          class="menu-icon"
+          aria-label="Open menu"
+          onclick="openSidebar()"
+        >
+          ☰
+        </button>
+      </nav>
+      <div class="nav-link-group-sidebar">
+        <ul class="sidebar">
+          <li>
+            <button
+              class="closebtn"
+              aria-label="Close menu"
+              onclick="closeSidebar()"
+            >
+              ×
+            </button>
+          </li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="physics.html">Physics</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="media.html">Media & More</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <img
+        src="assets/img/profile.jpg"
+        alt="Jann Portrait"
+        class="hero-imageT"
+      />
+      <div class="image-divider"></div>
+      <br />
+      <br />
+      <h1 class="nametitle">Jann Zosso</h1>
+
+      <div class="text-divider"></div>
+
+      <br />
+      <p>
+        Doctor of Sciences ETH Zürich <br />
+        SNF Postdoctoral Fellow <br />
+        Theoretical Physicist
+      </p>
+      <br />
+      <br />
+      <br />
+      <p class="explore-title">explore</p>
+      <br />
+      <div>
+        <a href="physics.html" class="explore left">Physics</a>
+        <a href="cv.html" class="explore center">CV</a>
+        <a href="media.html" class="explore right">Media & More</a>
+      </div>
+      <br />
+      <br />
+      <br />
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text left">
+          <span
+            ><a href="mailto:jann.zosso@nbi.ku.dk" class="explorefooter"
+              >jann.zosso@nbi.ku.dk</a
+            ><br />
+            <a
+              target="_blank"
+              href="https://strong-gr.com/"
+              class="explorefooter"
+              >strong.</a
+            ></span
+          >
+        </div>
+        <div class="footer-image center">
+          <a target="_blank" href="https://the-center-of-gravity.com/">
+            <img src="assets/img/footer-logo.png" alt="Footer Logo" />
+          </a>
+        </div>
+        <div class="footer-text right">
+          <span
+            >Niels Bohr Institute<br />Blegdamsvej 17<br />2100 Copenhagen
+            Ø</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function openSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function closeSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

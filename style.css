@@ -1,0 +1,716 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Header (Navigation) */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-link-group a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: gray;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link-group a:hover {
+  color: black;
+}
+
+.nav-link-group a.active {
+  color: black;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Main Content */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1.5rem 0 1rem 0;
+}
+
+p,
+li {
+  margin-bottom: 1rem;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- titles */
+.nametitle {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.smalltitle {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- justified text */
+.justified-article {
+  max-width: 1000px;
+}
+
+.justified-article p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- dividers */
+.image-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 auto 0 auto;
+}
+
+.text-divider {
+  width: 33%;
+  height: 4px;
+  background-color: #d95b0d;
+  margin: 4rem auto 4rem auto;
+  border-radius: 2px;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- explore */
+
+.explore-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.3em;
+}
+
+.explore {
+  position: absolute;
+  /* display: flex; */
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  /* font-weight: 400; */
+  font-size: 1rem;
+}
+
+.explore::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #d95b0d;
+  border-radius: 2px;
+  margin: auto;
+  transition: width 0.5s;
+}
+
+.explore:hover::after {
+  width: 100%;
+}
+
+.explore.center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.explore.left {
+  left: calc(50% - 307px);
+  transform: translate(-50%, -50%);
+}
+
+.explore.right {
+  left: calc(50% + 307px);
+  transform: translate(-50%, -50%);
+}
+
+.exploretext {
+  position: relative; /* needed for ::after positioning */
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding-bottom: 2px; /* space for underline */
+}
+
+.exploretext::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #d95b0d;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- images */
+
+.hero-imageT {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 1px;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  /* padding: 0 1rem; */
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- justified images */
+
+.float-img-L {
+  float: left;
+  margin: 10px 20px 10px 0;
+  width: 287px;
+  border-radius: 6px;
+}
+
+.float-img-R {
+  float: right;
+  margin: 10px 0 10px 20px;
+  width: 287px;
+  border-radius: 6px;
+}
+
+.img-float-R-with-credit {
+  float: right; /* <-- key: float the container */
+  margin: 10px 0 10px 20px; /* same spacing you had on the image */
+  width: 287px; /* match the image width */
+  position: relative; /* for positioning the credit */
+  line-height: 0; /* remove gap under the image */
+}
+
+.img-float-R-with-credit .img-credcontainer {
+  float: none; /* ensure the image itself does not float */
+  display: block;
+  width: 100%; /* fills the wrapper */
+  border-radius: 6px; /* your existing radius */
+}
+
+.img-float-R-with-credit .img-credit {
+  position: absolute;
+  right: 0.3px;
+  bottom: 6px;
+  font-size: 0.5rem;
+  color: #666;
+  padding: 2px 6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.img-float-L-with-credit {
+  float: left; /* <-- key: float the container */
+  margin: 10px 20px 10px 0; /* same spacing you had on the image */
+  width: 287px; /* match the image width */
+  position: relative; /* for positioning the credit */
+  line-height: 0; /* remove gap under the image */
+}
+
+/* keep your image full-width inside the wrapper; don't float it */
+.img-float-L-with-credit .img-credcontainer {
+  float: none; /* ensure the image itself does not float */
+  display: block;
+  width: 100%; /* fills the wrapper */
+  border-radius: 6px; /* your existing radius */
+}
+
+/* credit overlay */
+.img-float-L-with-credit .img-credit {
+  position: absolute;
+  right: 0.3px;
+  bottom: 6px;
+  font-size: 0.5rem;
+  color: #666;
+  padding: 2px 6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* %%%%%%%%%%%%%%%%% */
+/* -- media */
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  gap: 1rem;
+}
+
+.news-img {
+  width: 150px; /* square size */
+  height: 150px;
+  object-fit: cover; /* ensures it stays square */
+  border-radius: 8px; /* optional rounding */
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-title-L {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+
+.news-title-R {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: right;
+}
+
+.news-date-L {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.2rem 0 0.8rem 0;
+  text-align: left;
+}
+
+.news-date-R {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.2rem 0 0.8rem 0;
+  text-align: right;
+}
+
+.news-description {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Footer */
+footer {
+  border-top: 1px solid #ddd;
+  margin-top: 4rem;
+  padding: 50px 0;
+  /* padding: 2rem 1rem 1rem; */
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 480px; /* fixed distance from center */
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  justify-content: center;
+}
+
+.footer-text span {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-text.left {
+  left: calc(50% - 400px);
+}
+
+.footer-text.right {
+  left: calc(50% + 400px);
+}
+
+.footer-image.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-image.center::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #d95b0d;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.footer-image.center:hover::after {
+  width: 92%;
+}
+
+.footer-image img {
+  display: block;
+  /* margin: 0 auto 1rem auto; */
+  max-width: 260px;
+  display: block;
+}
+
+.explorefooter {
+  position: relative; /* needed for ::after positioning */
+  text-decoration: none;
+  color: black;
+  padding-bottom: 2px; /* space for underline */
+}
+
+.explorefooter::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* start from the middle */
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #d95b0d;
+  border-radius: 2px;
+  transform: translateX(-50%); /* center the underline */
+  transition: width 0.4s ease;
+}
+
+.explorefooter:hover::after {
+  width: 100%; /* expand to full width */
+}
+
+@media (min-width: 1000px) {
+  .explore.center {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: none;
+  }
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Tablet */
+@media (max-width: 1000px) and (min-width: 768px) {
+  .container,
+  .banner {
+    max-width: 768px;
+    margin: 0 auto; /* keep centered */
+  }
+
+  /* smaller news description text */
+  .news-description {
+    font-size: 0.9rem; /* slightly smaller text */
+    line-height: 1.4; /* keep readability */
+  }
+
+  .exploretext {
+    font-size: 0.9rem; /* slightly smaller text */
+    line-height: 1.4; /* keep readability */
+  }
+
+  /* footer */
+
+  .footer-content {
+    gap: 360px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .footer-image img {
+    max-width: 180px;
+    height: auto;
+  }
+
+  /* Explore section adjustments */
+  .explore.left {
+    left: calc(50% - 250px);
+    transform: translate(-50%, -50%);
+  }
+
+  .explore.right {
+    left: calc(50% + 250px);
+    transform: translate(-50%, -50%);
+  }
+
+  .explore.center {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: none;
+  }
+
+  /* Header nav adjustment */
+  nav {
+    padding: 1rem 1.5rem; /* slightly tighter within 768px */
+  }
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Mobile */
+/* -- header */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1.8rem 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-link-group {
+    display: none;
+  }
+
+  .nav-link-group a {
+    flex: unset;
+    font-size: 1.1rem;
+  }
+
+  /* -- Explore links */
+  .explore {
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    transform: none !important;
+    left: auto !important;
+  }
+
+  /* -- footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-text.left,
+  .footer-text.right,
+  .footer-image.center {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .footer-image img {
+    max-width: 180px;
+  }
+
+  .footer-image.center::after,
+  .footer-image.center:hover::after {
+    width: 0 !important; /* keep the underline hidden */
+    transition: none !important; /* no animation */
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* -- Floated images */
+  .float-img-L,
+  .float-img-R,
+  .img-float-L-with-credit,
+  .img-float-R-with-credit {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .img-credit {
+    font-size: 0.7rem;
+    bottom: 4px;
+  }
+
+  /* -- news items */
+  .news-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-title-L,
+  .news-title-R,
+  .news-date-L,
+  .news-date-R {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* -- Typography adjustments */
+  body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-top: 50px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+}
+
+/* -- Sidebar */
+.sidebar {
+  list-style: none; /* removes the bullets */
+  margin: 0; /* removes extra default spacing */
+  padding: 0;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.675);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  /* overflow-x: hidden; */
+  transition: 0.3s;
+  padding-top: 20px;
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: gray;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: black;
+}
+
+.sidebar a.active {
+  color: black;
+}
+
+.menu-icon {
+  position: absolute; /* take it out of the normal flow */
+  right: 1rem; /* push it to the right edge */
+  top: 50%; /* vertically center */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+/* .menu-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+} */
+
+.closebtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: gray;
+  margin: 10px;
+  align-self: flex-end;
+}
+.closebtn:hover {
+  color: black;
+}
+
+.nav-link-group-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-link-group-sidebar a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: gray;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link-group-sidebar a:hover {
+  color: black;
+}
+
+.nav-link-group-sidebar a.active {
+  color: black;
+}

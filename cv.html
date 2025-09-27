@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jann Zosso - CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-link-group">
+          <a href="index.html">Home</a>
+          <a href="physics.html">Physics</a>
+          <a href="cv.html" class="active">CV</a>
+          <a href="media.html">Media & More</a>
+        </div>
+        <button
+          class="menu-icon"
+          aria-label="Open menu"
+          onclick="openSidebar()"
+        >
+          ☰
+        </button>
+      </nav>
+      <div class="nav-link-group-sidebar">
+        <ul class="sidebar">
+          <li>
+            <button
+              class="closebtn"
+              aria-label="Close menu"
+              onclick="closeSidebar()"
+            >
+              ×
+            </button>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="physics.html">Physics</a></li>
+          <li><a href="cv.html" class="active">CV</a></li>
+          <li><a href="media.html">Media & More</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <img
+        src="assets/img/banner-cv.JPEG"
+        alt="CV Banner"
+        class="banner-image"
+      />
+      <p>
+        Space and time seem given and immutable, like the mountain chains I so
+        often wander along; and only a more careful sight reveals their dynamics
+        and long history of change.
+      </p>
+      <br />
+      <br />
+      <div class="image-divider"></div>
+      <br />
+      <br />
+      <h3 class="smalltitle">Short Curriculum</h3>
+      <br />
+      <p>
+        SNF Postdocoral Research Fellow, Strong Group, Center of Gravity <br />
+        Niels Bohr Institute, Denmark (2025-ongoing)
+      </p>
+      <p>
+        SNF Postdocoral Research Fellow, Albert Einstein Center <br />University
+        of Bern, Switzerland (2024-2025)
+      </p>
+      <div class="text-divider"></div>
+
+      <p>
+        Doctorate in Theoretical Physics, Theoretical Cosmology Group <br />
+        ETH Zürich, Switzerland (2019-2024) <br />
+        Advisor: Prof. Lavinia Heisenberg and Prof. Philippe Jetzer
+      </p>
+      <p>
+        ETHZ Doc.Mobility Fellowship, Illinois Center for Advanced Studies of
+        the Universe <br />
+        University of Illinois Urbana-Champaign, USA (2022-2023) <br />
+        Advisor: Prof. Nicolás Yunes
+      </p>
+      <div class="text-divider"></div>
+
+      <p>
+        Master and Bachelor of Science in Physics <br />
+        EPFL, Switzerland (2012-2018) <br />
+        Advisor: Prof. Riccardo Rattazzi
+      </p>
+      <p>
+        Academic Exchange Abroad <br />
+        University of Waterloo, Canada (2014-2015)
+      </p>
+      <!-- <div class="text-divider"></div> -->
+      <br />
+      <br />
+      <br />
+      <p class="explore-title">explore</p>
+
+      <br />
+      <div>
+        <a href="assets/cv/JZWebCV.pdf" class="explore center">full CV</a>
+      </div>
+      <br />
+      <br />
+      <br />
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text left">
+          <span
+            ><a href="mailto:jann.zosso@nbi.ku.dk" class="explorefooter"
+              >jann.zosso@nbi.ku.dk</a
+            ><br />
+            <a
+              target="_blank"
+              href="https://strong-gr.com/"
+              class="explorefooter"
+              >strong.</a
+            ></span
+          >
+        </div>
+        <div class="footer-image center">
+          <a target="_blank" href="https://the-center-of-gravity.com/">
+            <img src="assets/img/footer-logo.png" alt="Footer Logo" />
+          </a>
+        </div>
+        <div class="footer-text right">
+          <span
+            >Niels Bohr Institute<br />Blegdamsvej 17<br />2100 Copenhagen
+            Ø</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function closeSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
