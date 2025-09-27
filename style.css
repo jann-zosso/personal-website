@@ -676,10 +676,10 @@ footer {
   cursor: pointer;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  -webkit-tap-highlight-color: transparent;
+  /* -webkit-tap-highlight-color: transparent;
   appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: none; */
 }
 
 .closebtn {
