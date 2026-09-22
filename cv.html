@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -48,7 +48,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       as="style"
       crossorigin="anonymous"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
 
     <noscript>
@@ -116,16 +119,21 @@
         Curriculum Vitae of Theoretical Physicist Jann Zosso
       </h1>
 
-      <img
-        src="assets/img/banner-cv.jpg"
-        alt="CV Banner"
-        class="banner-image"
-      />
+      <video class="banner-image" autoplay loop muted playsinline>
+        <source src="assets/img/banner-media.webm" type="video/webm" />
+        <source src="assets/img/banner-media-4.mp4" type="video/mp4" />
+      </video>
+
       <p>
-        Space and time seem given and immutable, like the mountain chains that
-        shape the earth. Only a more careful look reveals their inherent
-        dynamics and long history of change.
+        A direct connection between Denmark and Switzerland: the NBI
+        Colliderscope visualizes in real-time the particle collisions of the
+        world's largest physics experiment at the Large Hadron Collider at CERN
+        near Geneva.
       </p>
+      <!-- Space and time seem given and immutable, like the mountain chains that
+        shape the earth. Only a more careful look reveals their inherent
+        dynamics and long history of change.-->
+
       <br />
       <br />
       <div class="image-divider"></div>
@@ -188,16 +196,10 @@
       <div class="footer-content">
         <div class="footer-text left">
           <span
-            ><a href="mailto:jann.zosso@nbi.ku.dk" class="explorefooter"
-              >jann.zosso@nbi.ku.dk</a
-            ><br />
-            <a
-              target="_blank"
-              href="https://strong-gr.com/"
-              class="explorefooter"
-              >strong.</a
-            ></span
-          >
+            ><a href="mailto:jann.zosso@uzh.ch" class="explorefooter"
+              >jann.zosso@uzh.ch</a
+            >
+          </span>
         </div>
         <div class="footer-image center">
           <a target="_blank" href="https://the-center-of-gravity.com/">
@@ -206,12 +208,13 @@
         </div>
         <div class="footer-text right">
           <span
-            >Niels Bohr Institute<br />Blegdamsvej 17<br />2100 Copenhagen
-            Ø</span
+            >University of Zürich<br />Y36 K34<br />Winterthurerstrasse
+            198</span
           >
         </div>
       </div>
     </footer>
+
     <script>
       function openSidebar() {
         const sidebar = document.querySelector(".sidebar");
